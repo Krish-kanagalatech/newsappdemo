@@ -41,12 +41,12 @@ class _SplashState extends State<Splash> with TickerProviderStateMixin {
                 ),
                 SizedBox(height: 15),
                 Text(
-                  '- Classic Flutter News',
+                  '- KTech News App',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 50),
                 Center(
-                  child: Image.asset("assets/images/ic_splash.png",
+                  child: Image.asset("assets/images/ic_splash_new.png",
                   ),
                 ),
               ],
