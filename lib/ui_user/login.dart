@@ -152,8 +152,13 @@ class _LoginPageState extends State<LoginPage> {
             ),
             onPressed: _sendToServer,
             padding: EdgeInsets.all(12),
-            color: Colors.lightBlueAccent,
-            child: Text('Log In', style: TextStyle(color: Colors.white)),
+            color: Colors.red,
+            child: Text(
+              'Log In',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
           ),
         ),
         new FlatButton(
@@ -170,7 +175,8 @@ class _LoginPageState extends State<LoginPage> {
         ),
         new FlatButton(
           onPressed: _sendToHomePage,
-          child: Text('Skip for now', style: TextStyle(color: Theme.of(context).accentColor)),
+          child: Text('Skip for now',
+              style: TextStyle(color: Theme.of(context).accentColor)),
         ),
       ],
     );
@@ -204,11 +210,11 @@ class _LoginPageState extends State<LoginPage> {
       }).then((res) {
         print(res.body.toString());
         final jsonResponse = json.decode(res.body);
-        if(jsonResponse["status"]=='fail'){
+        if (jsonResponse["status"] == 'fail') {
           scaffoldKey.currentState.showSnackBar(SnackBar(
               content: new Text(jsonResponse["msg"]),
               duration: const Duration(milliseconds: 1500)));
-        }else{
+        } else {
           _registerData = RegisterData.fromJson(jsonResponse);
           sharedPref.saveString("name", _registerData.name);
           sharedPref.saveString("phone", _registerData.phone);
@@ -268,7 +274,8 @@ class CustomAlertDialogState extends State<CustomAlertDialog> {
   }
 
   sendOTP(String mobile, String otp) async {
-    var url = 'https://control.msg91.com/api/sendotp.php?authkey=${Constants.msg91AuthKey}&mobile=$mobile&message=Your%20Classic%20Flutter%20News%20App%20Reset%20Password%20OTP%20is%20$otp&otp=$otp';
+    var url =
+        'https://control.msg91.com/api/sendotp.php?authkey=${Constants.msg91AuthKey}&mobile=$mobile&message=Your%20Classic%20Flutter%20News%20App%20Reset%20Password%20OTP%20is%20$otp&otp=$otp';
     var response = await http.get(url);
     if (response.statusCode == 200) {
       var jsonResponse = jsonDecode(response.body);
@@ -340,8 +347,9 @@ class CustomAlertDialogState extends State<CustomAlertDialog> {
                             hintText: 'Mobile Number',
                             contentPadding:
                                 EdgeInsets.only(left: 25.0, top: 15.0),
-                            hintStyle:
-                                TextStyle(color: Theme.of(context).accentColor, fontSize: 14.0)),
+                            hintStyle: TextStyle(
+                                color: Theme.of(context).accentColor,
+                                fontSize: 14.0)),
                         style: TextStyle(color: Theme.of(context).accentColor),
                       ),
                     )
@@ -352,7 +360,8 @@ class CustomAlertDialogState extends State<CustomAlertDialog> {
                     decoration: new BoxDecoration(
                         border: new Border(
                             bottom: new BorderSide(
-                                width: 0.5, color: Theme.of(context).accentColor))),
+                                width: 0.5,
+                                color: Theme.of(context).accentColor))),
                   )
                 ]),
               ],
@@ -372,7 +381,7 @@ class CustomAlertDialogState extends State<CustomAlertDialog> {
           new FlatButton(
             child: new Text(
               'RESET',
-              style: TextStyle(color:Theme.of(context).accentColor),
+              style: TextStyle(color: Theme.of(context).accentColor),
             ),
             onPressed: () {
               if (_sendResetEmail()) {
@@ -382,7 +391,7 @@ class CustomAlertDialogState extends State<CustomAlertDialog> {
                   otp = otp + rnd.nextInt(9).toString();
                 }
                 Navigator.of(context).pop(_resetEmail);
-                sendOTP(_resetEmail,otp);
+                sendOTP(_resetEmail, otp);
                 sharedPref.saveString("resetMobile", _resetEmail);
                 sharedPref.saveString("resetOTP", otp);
                 _sendToForgotPage();

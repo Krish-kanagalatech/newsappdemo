@@ -71,14 +71,22 @@ class Link {
   String href;
   String title;
   String count;
+  String bussinessId;
 
-  Link({this.img, this.href, this.title, this.count});
+  Link({
+    this.img,
+    this.href,
+    this.title,
+    this.count,
+    this.bussinessId,
+  });
 
   Link.fromJson(Map<String, dynamic> json) {
     img = Api.imageURL + json['image'];
     href = json['href'];
     title = json['title'];
     count = json['count'];
+    bussinessId = json['business_id'];
   }
 
   Map<String, dynamic> toJson() {
@@ -87,6 +95,7 @@ class Link {
     data['href'] = this.href;
     data['title'] = this.title;
     data['count'] = this.count;
+    data['business_id'] = this.bussinessId;
     return data;
   }
 }

@@ -5,24 +5,12 @@ class Constants {
   static String appPackage = "com.kanagalatech.newsappdemo";
 
   //OTP Setup
-  static String msg91AuthKey="264945AeCxvjPPygN5c756de7";
+  static String msg91AuthKey = "264945AeCxvjPPygN5c756de7";
 
-  static String appAbout =
-      "<h3>Staying current is key in our fast-paced world.</h3>"
-      "Most people wouldn’t even consider getting a physical morning newspaper anymore, "
-      "so we depend on digital sources for our news. Finding an app that helps you get the news you want in a timely manner is essential."
-      "<p>Now all are in your handy. The app contains so many popular categories of news. Such as news, business, magazines, sports, jobs, technology and entertainment. You can read, bookmark, and share the news with others.</p>"
-      '<p>Now all are in your handy. The app contains so many popular categories of news. Such as news, business, magazines, sports, jobs, technology and entertainment. You can read, bookmark, and share the news with others.</p>'
-      "<p>Now all are in your handy. The app contains so many popular categories of news. Such as news, business, magazines, sports, jobs, technology and entertainment. You can read, bookmark, and share the news with others.</p>"
-      "<p>Now all are in your handy. The app contains so many popular categories of news. Such as news, business, magazines, sports, jobs, technology and entertainment. You can read, bookmark, and share the news with others.</p>";
+  static String appAbout = "ABOUT YOUR INFORMATION WILL APPEAR HERE";
 
   static String appPrivacy = "<h3>Privacy Policy</h3>"
-      "Most people wouldn’t even consider getting a physical morning newspaper anymore, "
-      "so we depend on digital sources for our news. Finding an app that helps you get the news you want in a timely manner is essential."
-      "<p>Now all are in your handy. The app contains so many popular categories of news. Such as news, business, magazines, sports, jobs, technology and entertainment. You can read, bookmark, and share the news with others.</p>"
-      '<p>Now all are in your handy. The app contains so many popular categories of news. Such as news, business, magazines, sports, jobs, technology and entertainment. You can read, bookmark, and share the news with others.</p>'
-      "<p>Now all are in your handy. The app contains so many popular categories of news. Such as news, business, magazines, sports, jobs, technology and entertainment. You can read, bookmark, and share the news with others.</p>"
-      "<p>Now all are in your handy. The app contains so many popular categories of news. Such as news, business, magazines, sports, jobs, technology and entertainment. You can read, bookmark, and share the news with others.</p>";
+      "We do not connect any of the personal information. Views expressed in the app are opinions of journalists and we have no responsibility on the same.";
 
   static Color lightPrimary = Colors.white;
   static Color darkPrimary = Colors.black;

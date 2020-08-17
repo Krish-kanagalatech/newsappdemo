@@ -6,9 +6,9 @@ import '../podo/category.dart';
 
 class Api {
   static String baseURL =  "http://206.189.143.159/news-demo/";
-  static String popular = baseURL + "api.php?get=top";
-  static String breaking = baseURL + "api.php?get=breaking";
-  static String trends = baseURL + "api.php?get=trends";
+  static String popular = baseURL + "api.php?get=top&business_id=100001";
+  static String breaking = baseURL + "api.php?get=breaking&business_id=100001";
+  static String trends = baseURL + "api.php?get=trends&business_id=100001";
   static String searchUrl = baseURL + "api.php?get=search&char=";
   static String imageURL = baseURL + "images/";
 
