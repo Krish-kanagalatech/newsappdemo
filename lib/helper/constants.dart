@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Constants {
-  static String appName = "Classic Flutter News";
-  static String appPackage = "com.sachi.classic_flutter_news";
+  static String appName = "KTech News App";
+  static String appPackage = "com.kanagalatech.newsappdemo";
 
   //OTP Setup
   static String msg91AuthKey="264945AeCxvjPPygN5c756de7";

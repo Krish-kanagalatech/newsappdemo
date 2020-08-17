@@ -25,8 +25,8 @@ class CategoryFeed {
 }
 
 class Feed {
-  List<Link> link;
-  List<Entry> entry;
+  List<Link> link = [];
+  List<Entry> entry = [];
 
   Feed({this.link, this.entry});
 
